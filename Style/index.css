@@ -1,0 +1,237 @@
+body {
+    background-image: url(./images/nahil-naseer-xljtGZ2-P3Y-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    min-height: 8vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #55464b; 
+    
+}
+
+.logo {
+    color: rgb(226, 226, 226);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {    
+    color: rgb(226, 226, 226);
+    padding: 30px;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+    color: rgb(226, 226, 226);
+    font-size: 16px;
+}
+
+#about {
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ padding: 50px;
+}
+
+.about-container {
+    color: rgb(226, 226, 226);
+    font-family: 'Poppins', sans-serif;
+    background-color:rgba(85, 70,75, .7);
+    height: 500px;
+    padding: 10px;
+    margin: 50px;
+    border-radius: 20px;
+}
+
+.about-container h5 {
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 30px;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-bottom: 10px;    
+}
+
+.about-container p {
+    line-height: 30px;
+    font-size: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.about-image-container img {
+    height: 500px;
+    border-radius: 50%;
+    margin: 50px;
+}
+
+.projectAndLanguage_container {    
+    color: rgb(226, 226, 226);
+    font-family: 'Poppins', sans-serif;
+    background-color:rgba(85, 70,75, .7);
+    border-radius: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 100px;
+    padding: 30px;
+}
+
+#projects {
+    display: flex;
+}
+
+.project-container h5{
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 30px;
+    padding-left: 30px;
+    padding-bottom: 10px;  
+}
+
+.project-list {
+    padding-left: 50px;
+    padding-right: 30px;
+}
+
+.project-list li {
+    line-height: 50px;
+    font-size: 25px;
+    letter-spacing: 3px;
+}
+
+#languages {
+    padding: 30px;
+}
+
+#languages h5 {
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 30px;
+    padding-bottom: 10px; 
+}
+
+.logos_container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+#css_logo {
+    height: 75px;
+}
+
+#html_logo {
+    height: 75px;
+}
+
+#js_logo {
+    height: 75px;
+}
+
+#github_logo {
+    height: 75px;
+}
+
+#git_logo {
+    height: 75px;
+}
+
+#markdown_logo {
+    height: 75px;
+
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color:rgb(226, 226, 226);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+    body{
+        overflow-x: hidden;
+    }    
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #55464b; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+    }
+    .about-container {
+        overflow: auto;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
